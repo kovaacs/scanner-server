@@ -1,0 +1,24 @@
+$color-primary: rgb(63, 81, 181);
+$color-accent: rgb(255,64,129);
+$cell_margin: 6px;
+$cell-1: 100% / ( 12 / 1);
+$cell-2: ( 100% / ( 12 / 2));
+$cell-3: ( 100% / ( 12 / 3));
+$cell-4: ( 100% / ( 12 / 4));
+$cell-5: ( 100% / ( 12 / 5));
+$cell-6: ( 100% / ( 12 / 6));
+$cell-7: ( 100% / ( 12 / 7));
+$cell-8: ( 100% / ( 12 / 8));
+$cell-9: ( 100% / ( 12 / 9));
+$cell-10: ( 100% / ( 12 / 10));
+$cell-11: ( 100% / ( 12 / 11));
+$cell-12: ( 100% / ( 12 / 12));
+
+//Change to /css before upload!
+$image_path: '/noteling/public/css/';
+
+@mixin fadeOpacity{
+    will-change: opacity;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition:opacity .5s ease-in-out;
+}

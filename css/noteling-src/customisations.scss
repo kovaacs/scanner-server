@@ -1,0 +1,70 @@
+html, body{
+    font-family:
+        "Roboto"
+        , "Helvetica", "Arial", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+    color: $color-accent;
+}
+
+.mdl-card{
+    overflow: visible;
+    width:100%;
+}
+
+.mdl-card__title{
+        flex-direction: row;
+    justify-content: flex-start;
+    * a {
+        font-weight: 300;
+    }
+}
+
+.mdl-card__title-text > .mdl-card__subtitle-text {
+    display: block;
+}
+
+.mdl-card__title-text,
+.mdl-card__subtitle-text {
+    align-self: flex-start;
+}
+
+.mdl-card__supporting-text{
+    flex-grow: 1;
+}
+
+.mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.mdl-checkbox {
+    height:100%;
+}
+
+.mdl-list__item-avatar.material-icons {
+     font-size: 28px;
+        line-height: 40px;
+        text-align: center;
+}
+
+.mdl-layout__content{
+      background: #f5f5f5;
+width: auto;
+    height: 100%;  
+}
+.mdl-layout{
+    position: absolute;
+}
+
+.mdl-snackbar{
+    z-index: 10;
+    @media (max-width: 479px) {
+max-height: none;
+}
+}
+

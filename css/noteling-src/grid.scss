@@ -1,0 +1,189 @@
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    align-items: stretch;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    .s-1,
+    .s-2,
+    .s-3,
+    .s-4,
+    .s-5,
+    .s-6,
+    .s-7,
+    .s-8,
+    .s-9,
+    .s-10,
+    .s-11,
+    .s-12,
+    .m-1,
+    .m-2,
+    .m-3,
+    .m-4,
+    .m-5,
+    .m-6,
+    .m-7,
+    .m-8,
+    .m-9,
+    .m-10,
+    .m-11,
+    .m-12,
+    .l-1,
+    .l-2,
+    .l-3,
+    .l-4,
+    .l-5,
+    .l-6,
+    .l-7,
+    .l-8,
+    .l-9,
+    .l-10,
+    .l-11,
+    .l-12,
+    {
+        box-sizing: border-box;
+        display: flex;
+        padding: 2px 4px;
+        margin: $cell_margin / 2;
+    }
+}
+
+.s-1 {
+    width: calc( #{$cell-1} - #{$cell_margin});
+}
+
+.s-2 {
+    width: calc( #{$cell-2} - #{$cell_margin});
+}
+
+.s-3 {
+    width: calc( #{$cell-3} - #{$cell_margin});
+}
+
+.s-4 {
+    width: calc( #{$cell-4} - #{$cell_margin});
+}
+
+.s-5 {
+    width: calc( #{$cell-5} - #{$cell_margin});
+}
+
+.s-6 {
+    width: calc( #{$cell-6} - #{$cell_margin});
+}
+
+.s-7 {
+    width: calc( #{$cell-7} - #{$cell_margin});
+}
+
+.s-8 {
+    width: calc( #{$cell-8} - #{$cell_margin});
+}
+
+.s-9 {
+    width: calc( #{$cell-9} - #{$cell_margin});
+}
+
+.s-10 {
+    width: calc( #{$cell-10} - #{$cell_margin});
+}
+
+.s-11 {
+    width: calc( #{$cell-11} - #{$cell_margin});
+}
+
+.s-12 {
+    width: calc( #{$cell-12} - #{$cell_margin});
+}
+
+@media only screen and (min-width: 601px) {
+    .m-1 {
+        width: calc( #{$cell-1} - #{$cell_margin});
+}
+.m-2 {
+    width: calc( #{$cell-2} - #{$cell_margin});
+}
+.m-3 {
+    width: calc( #{$cell-3} - #{$cell_margin});
+}
+.m-4 {
+    width: calc( #{$cell-4} - #{$cell_margin});
+}
+.m-5 {
+    width: calc( #{$cell-5} - #{$cell_margin});
+}
+.m-6 {
+    width: calc( #{$cell-6} - #{$cell_margin});
+}
+.m-7 {
+    width: calc( #{$cell-7} - #{$cell_margin});
+}
+.m-8 {
+    width: calc( #{$cell-8} - #{$cell_margin});
+}
+.m-9 {
+    width: calc( #{$cell-9} - #{$cell_margin});
+}
+.m-10 {
+    width: calc( #{$cell-10} - #{$cell_margin});
+}
+.m-11 {
+    width: calc( #{$cell-11} - #{$cell_margin});
+}
+.m-12 {
+    width: calc( #{$cell-12} - #{$cell_margin});
+}
+}
+
+@media only screen and (min-width: 993px) {
+    .l-1 {
+        width: calc( #{$cell-1} - #{$cell_margin});
+}
+.l-2 {
+    width: calc( #{$cell-2} - #{$cell_margin});
+}
+.l-3 {
+    width: calc( #{$cell-3} - #{$cell_margin});
+}
+.l-4 {
+    width: calc( #{$cell-4} - #{$cell_margin});
+}
+.l-5 {
+    width: calc( #{$cell-5} - #{$cell_margin});
+}
+.l-6 {
+    width: calc( #{$cell-6} - #{$cell_margin});
+}
+.l-7 {
+    width: calc( #{$cell-7} - #{$cell_margin});
+}
+.l-8 {
+    width: calc( #{$cell-8} - #{$cell_margin});
+}
+.l-9 {
+    width: calc( #{$cell-9} - #{$cell_margin});
+}
+.l-10 {
+    width: calc( #{$cell-10} - #{$cell_margin});
+}
+.l-11 {
+    width: calc( #{$cell-11} - #{$cell_margin});
+}
+.l-12 {
+    width: calc( #{$cell-12} - #{$cell_margin});
+}
+}
+
+.master {
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    opacity: 1;
+    will-change: opacity, filter, -webkit-filter;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}

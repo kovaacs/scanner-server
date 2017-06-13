@@ -32,6 +32,13 @@ a[data-inherit]{
     text-decoration: inherit;
 }
 
-#resolution.mdl-textfield__input {
+
+#resolution-panel{
+.mdl-textfield {
     width: 125px;
+}}
+.mdl-tabs__panel {
+    .panel-padding {
+        margin-top: 16px;
+    }
 }

@@ -1,5 +1,4 @@
 // ANIMATIONS
-
 @-webkit-keyframes blink {
     0% {
         opacity: 1;
@@ -25,18 +24,18 @@
 }
 
 // TAGS
-
-a[data-inherit]{
+a[data-inherit] {
     color: inherit;
     font-weight: inherit;
     text-decoration: inherit;
 }
 
+#resolution-panel {
+    .mdl-textfield {
+        width: 125px;
+    }
+}
 
-#resolution-panel{
-.mdl-textfield {
-    width: 125px;
-}}
 .mdl-tabs__panel {
     .panel-padding {
         margin-top: 16px;

@@ -31,9 +31,22 @@ a[data-inherit] {
 }
 
 #resolution-panel {
+    p {
+        width: 75%;
+    }
     .mdl-textfield {
         width: 125px;
     }
+}
+
+.panel-padding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.align-left {
+    align-items: flex-end;
 }
 
 .mdl-tabs__panel {
@@ -47,4 +60,8 @@ form {
     flex-direction: column;
     height: 100%;
     width: 100%;
+}
+
+.mdl-card {
+    height: 325px;
 }

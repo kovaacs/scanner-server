@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,6 +10,7 @@
 	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
 	<meta content="rgb(42, 46, 58)" name="theme-color">
 	<link href="favicon-152.png" rel="icon" sizes="152x152">
+
 	<title>Scanner Server</title>
 	<!--SCRIPTS N WHATNOT-->
 	<link href="css/print.css" rel="stylesheet">
@@ -18,54 +20,82 @@
 	<div class="mdl-layout mdl-js-layout">
 		<main class="mdl-layout__content">
 			<div aria-atomic="true" aria-live="assertive" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
-				<div class="mdl-snackbar__text"></div><button class="mdl-snackbar__action" type="button"></button>
+				<div class="mdl-snackbar__text">
+				</div>
+				<button class="mdl-snackbar__action" type="button"></button>
 			</div>
+
+
 			<div class="master" id="master">
 				<div class="row">
-					<div class="s-12 m-6 l-6">
+					<div class="s-12 m-8 l-6">
 						<div class="mdl-card shadow-1" id="hello">
-							<form id="form_post" name="form_post">
+							<form id="form_post">
 								<div class="mdl-card__title">
 									<h2 class="mdl-card__title-text">Scanner Server</h2>
 								</div>
+
+
 								<div class="mdl-card__supporting-text">
 									<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 										<div class="mdl-tabs__tab-bar">
 											<a class="mdl-tabs__tab is-active" href="#mode-panel">Mode</a> <a class="mdl-tabs__tab" href="#compression-panel">Compression</a>											<a class="mdl-tabs__tab" href="#resolution-panel">Resolution</a>
 										</div>
+
+
 										<div class="mdl-tabs__panel is-active" id="mode-panel">
 											<div class="panel-padding">
-												<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="gray"><input class=
-											"mdl-radio__button" id="gray" name="mode" type="radio" value="gray"> <span class=
-											"mdl-radio__label">Gray</span></label> <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-												 for="color"><input checked class=
-											"mdl-radio__button" id="color" name="mode" type="radio" value="color"> <span class=
-											"mdl-radio__label">Color</span></label>
+												<div class="align-left">
+													<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="gray"><input class=
+												"mdl-radio__button" id="gray" name="mode" type="radio" value="gray"> <span class=
+												"mdl-radio__label">Gray</span></label><br>
+													<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="color"><input checked
+												class="mdl-radio__button" id="color" name="mode" type="radio" value="color">
+												<span class="mdl-radio__label">Color</span></label><br>
+												</div>
 											</div>
 										</div>
+
+
 										<div class="mdl-tabs__panel" id="compression-panel">
 											<div class="panel-padding">
-												<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="none"><input class=
-											"mdl-radio__button" id="none" name="compression" type="radio" value="none"> <span class=
-											"mdl-radio__label">None</span></label> <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-												 for="zip"><input checked class=
-											"mdl-radio__button" id="zip" name="compression" type="radio" value="zip"> <span class=
-											"mdl-radio__label">Zip</span></label> <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="jpeg"><input class="mdl-radio__button"
-											id="jpeg" name="compression" type="radio" value="jpeg"> <span class=
-											"mdl-radio__label">JPEG</span></label> <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="lzw"><input class="mdl-radio__button"
-											id="lzw" name="compression" type="radio" value="lzw"> <span class=
-											"mdl-radio__label">LZW</span></label>
+												<div class="align-left">
+													<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="none"><input class=
+												"mdl-radio__button" id="none" name="compression" type="radio" value="none">
+												<span class="mdl-radio__label">None</span></label><br>
+													<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="zip"><input checked
+												class="mdl-radio__button" id="zip" name="compression" type="radio" value="zip">
+												<span class="mdl-radio__label">Zip</span></label><br>
+													<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="jpeg"><input class=
+												"mdl-radio__button" id="jpeg" name="compression" type="radio" value="jpeg">
+												<span class="mdl-radio__label">JPEG</span></label><br>
+													<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="lzw"><input class=
+												"mdl-radio__button" id="lzw" name="compression" type="radio" value="lzw"> <span class=
+												"mdl-radio__label">LZW</span></label>
+												</div>
 											</div>
 										</div>
+
+
 										<div class="mdl-tabs__panel" id="resolution-panel">
 											<div class="panel-padding">
+
 												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-													<input class="mdl-textfield__input" id="resolution" max="600" min="100" name="resolution" type="number" value="300">													<label class="mdl-textfield__label" for="fname">Resolution (DPI)</label> <span class="mdl-textfield__error">Between 100 and 600</span>
+													<input class="mdl-textfield__input" id="resolution" name="resolution" max="1200" min="100" type="number" value="300">
+													<label class="mdl-textfield__label" for="fname">Resolution (DPI)</label> <span class="mdl-textfield__error">Between 100 and
+													1200</span>
 												</div>
+												<!-- Slider with Starting Value -->
+
+												<p><input class="mdl-slider mdl-js-slider" step="100" max="1200" min="100" type="range" value="300" id="slider-resolution">
+												</p>
+
 											</div>
 										</div>
 									</div>
 								</div>
+
+
 								<div class="mdl-card__actions mdl-card--border">
 									<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="button_post" type="submit"
 									 value="Scan">

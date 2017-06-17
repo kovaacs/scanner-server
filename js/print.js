@@ -1,5 +1,5 @@
 const AJAX = {
-    getBlob: function (URL, callback) {
+    post: function (URL, data, callback) {
         const XMLreq = new XMLHttpRequest();
         XMLreq.onreadystatechange = function () {
             if (XMLreq.readyState === 4) {
@@ -7,37 +7,32 @@ const AJAX = {
                     callback(XMLreq.response);
                 };
             };
-        };
-        XMLreq.responseType = "blob";
-        XMLreq.open("GET", URL, true);
-        XMLreq.send();
-    },
-    post: function (URL, data, callback) {
-        const XMLreq = new XMLHttpRequest();
-        XMLreq.onreadystatechange = function () {
-            if (XMLreq.readyState === 4) {
-                if (XMLreq.status === 200) {
-                    callback(XMLreq.responseText);
-                };
-            };
         }
+        XMLreq.responseType = "blob";
         XMLreq.timeout = 300000;
         XMLreq.open("POST", URL, true);
         XMLreq.send(data);
     },
-    download: function (inBlob, fileName, MIMEtype, callback) {
+    download: function (incomingData, MIMEtype, callback) {
         let a = document.createElement("a"),
-            url;
-        inBlob.type = MIMEtype;
-        url = window.URL.createObjectURL(inBlob);
+            url, downloadFile = new Blob([incomingData], { type: MIMEtype });
+        console.log(JSON.stringify(downloadFile.name));
+        url = window.URL.createObjectURL(downloadFile);
         document.body.appendChild(a);
         a.href = url;
-        a.download = fileName;
+        a.download = `${getDecentlyFormattedDate()}.pdf`;
         a.click();
         window.URL.revokeObjectURL(url);
         if (callback) callback();
     }
 };
+function getDecentlyFormattedDate() {
+    const today = new Date();
+    return `${today.getFullYear()}-${addZeros((today.getMonth()) + 1)}-${addZeros(today.getDate())}_${addZeros(today.getHours())}-${addZeros(today.getMinutes())}-${addZeros(today.getSeconds())}`;
+    function addZeros(inp) {
+        return ("0" + inp).slice(-2);
+    }
+}
 (function () {
     window.addEventListener("load", function () {
         const formPost = document.getElementById("form_post");
@@ -49,12 +44,9 @@ const AJAX = {
             element.preventDefault();
             const formData = new FormData(formPost);
             AJAX.post("scan.php", formData, function (resp) {
-                const parsedJSON = JSON.parse(resp);
-                AJAX.getBlob(parsedJSON.file_name, function (resp) {
-                    AJAX.download(resp, parsedJSON.file_name.split("/")[1], "application/pdf", function () {
-                        buttonPost.removeAttribute("disabled");
-                        buttonPost.value = "Scan";
-                    });
+                AJAX.download(resp, "application/pdf", function () {
+                    buttonPost.removeAttribute("disabled");
+                    buttonPost.value = "Scan";
                 });
             });
             buttonPost.setAttribute("disabled", true);
